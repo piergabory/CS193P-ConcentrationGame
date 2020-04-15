@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card {
+struct Card: Equatable {
     var isFaceUp = false
     var isMatched = false
     var identifier: Int
