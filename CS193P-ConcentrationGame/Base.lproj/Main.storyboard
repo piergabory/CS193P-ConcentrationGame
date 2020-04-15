@@ -15,8 +15,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No flips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlJ-kk-UNe">
+                                <rect key="frame" x="20" y="782" width="85.5" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QO0-8i-pMB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0G-HH-f76" userLabel="Card">
+                                <rect key="frame" x="244" y="44" width="150" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4YQ-GH-JDG"/>
+                                    <constraint firstAttribute="width" constant="150" id="yvD-PU-zpA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="🍅"/>
+                                <connections>
+                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lLe-Tc-CK1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZr-gF-Yfu" userLabel="Card">
+                                <rect key="frame" x="20" y="268" width="150" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GyI-5A-GxI"/>
+                                    <constraint firstAttribute="height" constant="200" id="Xgz-1Y-Fj1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="🍅"/>
+                                <connections>
+                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O1Y-6q-KqZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAJ-dh-qN8" userLabel="Card">
+                                <rect key="frame" x="244" y="268" width="150" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="OEk-vG-XpK"/>
+                                    <constraint firstAttribute="height" constant="200" id="cgD-zt-4jt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="🍅"/>
+                                <connections>
+                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oqm-Cq-lpl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiQ-FM-rwz" userLabel="Card">
+                                <rect key="frame" x="20" y="489" width="150" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="41O-TX-rcf"/>
+                                    <constraint firstAttribute="height" constant="200" id="Ajh-A4-nco"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="🍅"/>
+                                <connections>
+                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFr-I3-cNu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpC-lZ-ISB" userLabel="Card">
+                                <rect key="frame" x="244" y="489" width="150" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="1Xe-lH-2v3"/>
+                                    <constraint firstAttribute="width" constant="150" id="VAF-Gj-TKZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="🍅"/>
+                                <connections>
+                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tAQ-zn-jAG"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-cn-qKd" userLabel="Card">
-                                <rect key="frame" x="132" y="348" width="150" height="200"/>
+                                <rect key="frame" x="20" y="44" width="150" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="drH-zX-Ekn"/>
@@ -28,43 +102,34 @@
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYD-Jg-4wu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No flips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlJ-kk-UNe">
-                                <rect key="frame" x="20" y="782" width="374" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="QO0-8i-pMB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sd-yr-udW" userLabel="Card">
-                                <rect key="frame" x="64" y="565" width="150" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Fh0-PC-fcv"/>
-                                    <constraint firstAttribute="width" constant="150" id="goK-SQ-I96"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="🍅"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eI3-ly-rbw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iCr-cn-qKd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0yc-1u-m15"/>
-                            <constraint firstItem="NlJ-kk-UNe" firstAttribute="centerX" secondItem="iCr-cn-qKd" secondAttribute="centerX" id="2hn-hn-RsU"/>
+                            <constraint firstItem="iCr-cn-qKd" firstAttribute="leading" secondItem="WZr-gF-Yfu" secondAttribute="leading" id="0rB-Hj-WBl"/>
+                            <constraint firstItem="EiQ-FM-rwz" firstAttribute="leading" secondItem="NlJ-kk-UNe" secondAttribute="leading" id="4CT-Uv-Rwm"/>
+                            <constraint firstItem="iCr-cn-qKd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5m1-Bt-MsA"/>
+                            <constraint firstItem="iCr-cn-qKd" firstAttribute="baseline" secondItem="s0G-HH-f76" secondAttribute="baseline" id="9Cl-p5-38g"/>
+                            <constraint firstItem="WZr-gF-Yfu" firstAttribute="top" secondItem="iCr-cn-qKd" secondAttribute="bottom" constant="24" id="Jj1-CN-L44"/>
                             <constraint firstItem="NlJ-kk-UNe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MN7-LF-X1h"/>
-                            <constraint firstItem="9Sd-yr-udW" firstAttribute="top" secondItem="iCr-cn-qKd" secondAttribute="bottom" constant="17" id="Tgh-DH-Cbo"/>
-                            <constraint firstItem="iCr-cn-qKd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ugq-Ni-OEh"/>
+                            <constraint firstItem="EiQ-FM-rwz" firstAttribute="baseline" secondItem="IpC-lZ-ISB" secondAttribute="baseline" id="MoV-rl-Ate"/>
                             <constraint firstItem="NlJ-kk-UNe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XS8-Sw-zoV"/>
-                            <constraint firstItem="9Sd-yr-udW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="jIL-vX-75L"/>
+                            <constraint firstItem="EiQ-FM-rwz" firstAttribute="top" secondItem="WZr-gF-Yfu" secondAttribute="bottom" constant="21" id="dhe-bR-4iF"/>
+                            <constraint firstItem="WZr-gF-Yfu" firstAttribute="baseline" secondItem="hAJ-dh-qN8" secondAttribute="baseline" id="gqp-Xt-Fdw"/>
+                            <constraint firstItem="hAJ-dh-qN8" firstAttribute="leading" secondItem="IpC-lZ-ISB" secondAttribute="leading" id="h48-mS-TQe"/>
+                            <constraint firstItem="s0G-HH-f76" firstAttribute="leading" secondItem="hAJ-dh-qN8" secondAttribute="leading" id="q1P-VL-gvX"/>
+                            <constraint firstItem="s0G-HH-f76" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xWM-Pn-E7N"/>
+                            <constraint firstItem="WZr-gF-Yfu" firstAttribute="leading" secondItem="EiQ-FM-rwz" secondAttribute="leading" id="xrZ-Sc-hIv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="NlJ-kk-UNe" id="XRV-ez-bZU"/>
+                        <outletCollection property="cardButtons" destination="iCr-cn-qKd" collectionClass="NSMutableArray" id="xfx-xd-Jq4"/>
+                        <outletCollection property="cardButtons" destination="s0G-HH-f76" collectionClass="NSMutableArray" id="JEQ-BH-W43"/>
+                        <outletCollection property="cardButtons" destination="hAJ-dh-qN8" collectionClass="NSMutableArray" id="JDv-QK-uh4"/>
+                        <outletCollection property="cardButtons" destination="WZr-gF-Yfu" collectionClass="NSMutableArray" id="yc5-oD-PYR"/>
+                        <outletCollection property="cardButtons" destination="IpC-lZ-ISB" collectionClass="NSMutableArray" id="ODc-sp-qPL"/>
+                        <outletCollection property="cardButtons" destination="EiQ-FM-rwz" collectionClass="NSMutableArray" id="Wwc-WJ-uCz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

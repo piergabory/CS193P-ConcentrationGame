@@ -14,15 +14,21 @@ class ViewController: UIViewController {
         didSet { flipCountLabel.text = "Flip Count \(flipCount)" }
     }
     
+    private var emojis = ["🍅", "🍌", "🥬", "🥑", "🍏", "🍉"]
+    
     @IBOutlet weak var flipCountLabel: UILabel!
     
+    @IBOutlet var cardButtons: [UIButton]!
+    
     @IBAction func touchCard(_ sender: UIButton) {
-        flipCard(withEmoji: "🍅", on: sender)
+        flipCount += 1
+        
+        if let cardIndex = cardButtons.firstIndex(of: sender), cardIndex < emojis.count {
+            flipCard(withEmoji: emojis[cardIndex], on: sender)
+        }
     }
     
     func flipCard(withEmoji emoji: String, on button: UIButton) {
-        flipCount += 1
-        
         if button.currentTitle == emoji {
             button.setTitle(" ", for: .normal)
             button.backgroundColor = .systemOrange
