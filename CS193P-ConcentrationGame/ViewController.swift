@@ -9,12 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    private var flipCount = 0 {
+        didSet { flipCountLabel.text = "Flip Count \(flipCount)" }
     }
-
-
+    
+    @IBOutlet weak var flipCountLabel: UILabel!
+    
+    @IBAction func touchCard(_ sender: UIButton) {
+        flipCard(withEmoji: "🍅", on: sender)
+    }
+    
+    func flipCard(withEmoji emoji: String, on button: UIButton) {
+        flipCount += 1
+        
+        if button.currentTitle == emoji {
+            button.setTitle(" ", for: .normal)
+            button.backgroundColor = .systemOrange
+        } else {
+            button.setTitle(emoji, for: .normal)
+            button.backgroundColor = .systemBackground
+        }
+    }
+    
 }
 

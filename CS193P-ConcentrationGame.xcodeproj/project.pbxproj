@@ -13,8 +13,6 @@
 		8642EC8224474FC9007204F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8642EC8024474FC9007204F5 /* Main.storyboard */; };
 		8642EC8424474FC9007204F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8642EC8324474FC9007204F5 /* Assets.xcassets */; };
 		8642EC8724474FC9007204F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8642EC8524474FC9007204F5 /* LaunchScreen.storyboard */; };
-		8642EC9224474FC9007204F5 /* CS193P_ConcentrationGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642EC9124474FC9007204F5 /* CS193P_ConcentrationGameTests.swift */; };
-		8642EC9D24474FCA007204F5 /* CS193P_ConcentrationGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642EC9C24474FCA007204F5 /* CS193P_ConcentrationGameUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +42,7 @@
 		8642EC8624474FC9007204F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8642EC8824474FC9007204F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8642EC8D24474FC9007204F5 /* CS193P-ConcentrationGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CS193P-ConcentrationGameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8642EC9124474FC9007204F5 /* CS193P_ConcentrationGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CS193P_ConcentrationGameTests.swift; sourceTree = "<group>"; };
-		8642EC9324474FC9007204F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8642EC9824474FCA007204F5 /* CS193P-ConcentrationGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CS193P-ConcentrationGameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8642EC9C24474FCA007204F5 /* CS193P_ConcentrationGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CS193P_ConcentrationGameUITests.swift; sourceTree = "<group>"; };
-		8642EC9E24474FCA007204F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				8642EC7924474FC9007204F5 /* CS193P-ConcentrationGame */,
-				8642EC9024474FC9007204F5 /* CS193P-ConcentrationGameTests */,
-				8642EC9B24474FCA007204F5 /* CS193P-ConcentrationGameUITests */,
 				8642EC7824474FC9007204F5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,24 +100,6 @@
 				8642EC8824474FC9007204F5 /* Info.plist */,
 			);
 			path = "CS193P-ConcentrationGame";
-			sourceTree = "<group>";
-		};
-		8642EC9024474FC9007204F5 /* CS193P-ConcentrationGameTests */ = {
-			isa = PBXGroup;
-			children = (
-				8642EC9124474FC9007204F5 /* CS193P_ConcentrationGameTests.swift */,
-				8642EC9324474FC9007204F5 /* Info.plist */,
-			);
-			path = "CS193P-ConcentrationGameTests";
-			sourceTree = "<group>";
-		};
-		8642EC9B24474FCA007204F5 /* CS193P-ConcentrationGameUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8642EC9C24474FCA007204F5 /* CS193P_ConcentrationGameUITests.swift */,
-				8642EC9E24474FCA007204F5 /* Info.plist */,
-			);
-			path = "CS193P-ConcentrationGameUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8642EC9224474FC9007204F5 /* CS193P_ConcentrationGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8642EC9D24474FCA007204F5 /* CS193P_ConcentrationGameUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CS193P-ConcentrationGame/CS193P-ConcentrationGame.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "CS193P-ConcentrationGame/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,6 +415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.piergabory.CS193P-ConcentrationGame";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CS193P-ConcentrationGame/CS193P-ConcentrationGame.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "CS193P-ConcentrationGame/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,6 +434,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.piergabory.CS193P-ConcentrationGame";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
