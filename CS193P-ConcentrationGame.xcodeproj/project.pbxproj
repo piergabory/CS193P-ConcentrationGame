@@ -15,23 +15,6 @@
 		8642EC8724474FC9007204F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8642EC8524474FC9007204F5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8642EC8E24474FC9007204F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8642EC6F24474FC8007204F5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8642EC7624474FC9007204F5;
-			remoteInfo = "CS193P-ConcentrationGame";
-		};
-		8642EC9924474FCA007204F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8642EC6F24474FC8007204F5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8642EC7624474FC9007204F5;
-			remoteInfo = "CS193P-ConcentrationGame";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		8642EC7724474FC9007204F5 /* CS193P-ConcentrationGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CS193P-ConcentrationGame.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8642EC7A24474FC9007204F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,26 +24,10 @@
 		8642EC8324474FC9007204F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8642EC8624474FC9007204F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8642EC8824474FC9007204F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8642EC8D24474FC9007204F5 /* CS193P-ConcentrationGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CS193P-ConcentrationGameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8642EC9824474FCA007204F5 /* CS193P-ConcentrationGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CS193P-ConcentrationGameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8642EC7424474FC9007204F5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8642EC8A24474FC9007204F5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8642EC9524474FCA007204F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				8642EC7724474FC9007204F5 /* CS193P-ConcentrationGame.app */,
-				8642EC8D24474FC9007204F5 /* CS193P-ConcentrationGameTests.xctest */,
-				8642EC9824474FCA007204F5 /* CS193P-ConcentrationGameUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,15 +56,23 @@
 		8642EC7924474FC9007204F5 /* CS193P-ConcentrationGame */ = {
 			isa = PBXGroup;
 			children = (
-				8642EC7A24474FC9007204F5 /* AppDelegate.swift */,
-				8642EC7C24474FC9007204F5 /* SceneDelegate.swift */,
+				8642ECAB24475CFC007204F5 /* AppSupport */,
 				8642EC7E24474FC9007204F5 /* ViewController.swift */,
 				8642EC8024474FC9007204F5 /* Main.storyboard */,
-				8642EC8324474FC9007204F5 /* Assets.xcassets */,
-				8642EC8524474FC9007204F5 /* LaunchScreen.storyboard */,
 				8642EC8824474FC9007204F5 /* Info.plist */,
 			);
 			path = "CS193P-ConcentrationGame";
+			sourceTree = "<group>";
+		};
+		8642ECAB24475CFC007204F5 /* AppSupport */ = {
+			isa = PBXGroup;
+			children = (
+				8642EC8524474FC9007204F5 /* LaunchScreen.storyboard */,
+				8642EC7A24474FC9007204F5 /* AppDelegate.swift */,
+				8642EC7C24474FC9007204F5 /* SceneDelegate.swift */,
+				8642EC8324474FC9007204F5 /* Assets.xcassets */,
+			);
+			path = AppSupport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,42 +95,6 @@
 			productReference = 8642EC7724474FC9007204F5 /* CS193P-ConcentrationGame.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8642EC8C24474FC9007204F5 /* CS193P-ConcentrationGameTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8642ECA424474FCA007204F5 /* Build configuration list for PBXNativeTarget "CS193P-ConcentrationGameTests" */;
-			buildPhases = (
-				8642EC8924474FC9007204F5 /* Sources */,
-				8642EC8A24474FC9007204F5 /* Frameworks */,
-				8642EC8B24474FC9007204F5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8642EC8F24474FC9007204F5 /* PBXTargetDependency */,
-			);
-			name = "CS193P-ConcentrationGameTests";
-			productName = "CS193P-ConcentrationGameTests";
-			productReference = 8642EC8D24474FC9007204F5 /* CS193P-ConcentrationGameTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8642EC9724474FCA007204F5 /* CS193P-ConcentrationGameUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8642ECA724474FCA007204F5 /* Build configuration list for PBXNativeTarget "CS193P-ConcentrationGameUITests" */;
-			buildPhases = (
-				8642EC9424474FCA007204F5 /* Sources */,
-				8642EC9524474FCA007204F5 /* Frameworks */,
-				8642EC9624474FCA007204F5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8642EC9A24474FCA007204F5 /* PBXTargetDependency */,
-			);
-			name = "CS193P-ConcentrationGameUITests";
-			productName = "CS193P-ConcentrationGameUITests";
-			productReference = 8642EC9824474FCA007204F5 /* CS193P-ConcentrationGameUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,14 +107,6 @@
 				TargetAttributes = {
 					8642EC7624474FC9007204F5 = {
 						CreatedOnToolsVersion = 11.4;
-					};
-					8642EC8C24474FC9007204F5 = {
-						CreatedOnToolsVersion = 11.4;
-						TestTargetID = 8642EC7624474FC9007204F5;
-					};
-					8642EC9724474FCA007204F5 = {
-						CreatedOnToolsVersion = 11.4;
-						TestTargetID = 8642EC7624474FC9007204F5;
 					};
 				};
 			};
@@ -195,8 +124,6 @@
 			projectRoot = "";
 			targets = (
 				8642EC7624474FC9007204F5 /* CS193P-ConcentrationGame */,
-				8642EC8C24474FC9007204F5 /* CS193P-ConcentrationGameTests */,
-				8642EC9724474FCA007204F5 /* CS193P-ConcentrationGameUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,20 +136,6 @@
 				8642EC8724474FC9007204F5 /* LaunchScreen.storyboard in Resources */,
 				8642EC8424474FC9007204F5 /* Assets.xcassets in Resources */,
 				8642EC8224474FC9007204F5 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8642EC8B24474FC9007204F5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8642EC9624474FCA007204F5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,34 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8642EC8924474FC9007204F5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8642EC9424474FCA007204F5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8642EC8F24474FC9007204F5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8642EC7624474FC9007204F5 /* CS193P-ConcentrationGame */;
-			targetProxy = 8642EC8E24474FC9007204F5 /* PBXContainerItemProxy */;
-		};
-		8642EC9A24474FCA007204F5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8642EC7624474FC9007204F5 /* CS193P-ConcentrationGame */;
-			targetProxy = 8642EC9924474FCA007204F5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8642EC8024474FC9007204F5 /* Main.storyboard */ = {
@@ -440,86 +326,6 @@
 			};
 			name = Release;
 		};
-		8642ECA524474FCA007204F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "CS193P-ConcentrationGameTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.piergabory.CS193P-ConcentrationGameTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CS193P-ConcentrationGame.app/CS193P-ConcentrationGame";
-			};
-			name = Debug;
-		};
-		8642ECA624474FCA007204F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "CS193P-ConcentrationGameTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.piergabory.CS193P-ConcentrationGameTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CS193P-ConcentrationGame.app/CS193P-ConcentrationGame";
-			};
-			name = Release;
-		};
-		8642ECA824474FCA007204F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "CS193P-ConcentrationGameUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.piergabory.CS193P-ConcentrationGameUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CS193P-ConcentrationGame";
-			};
-			name = Debug;
-		};
-		8642ECA924474FCA007204F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "CS193P-ConcentrationGameUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.piergabory.CS193P-ConcentrationGameUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CS193P-ConcentrationGame";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -537,24 +343,6 @@
 			buildConfigurations = (
 				8642ECA224474FCA007204F5 /* Debug */,
 				8642ECA324474FCA007204F5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8642ECA424474FCA007204F5 /* Build configuration list for PBXNativeTarget "CS193P-ConcentrationGameTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8642ECA524474FCA007204F5 /* Debug */,
-				8642ECA624474FCA007204F5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8642ECA724474FCA007204F5 /* Build configuration list for PBXNativeTarget "CS193P-ConcentrationGameUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8642ECA824474FCA007204F5 /* Debug */,
-				8642ECA924474FCA007204F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
