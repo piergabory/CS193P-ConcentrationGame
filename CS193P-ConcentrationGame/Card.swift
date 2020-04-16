@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card: Equatable {
+struct Card {
     var isFaceUp = false
     var isMatched = false
     var identifier: Int
@@ -17,5 +17,11 @@ struct Card: Equatable {
     init() {
         identifier = Card.nextIdentifier
         Card.nextIdentifier += 1
+    }
+}
+
+extension Card: Equatable {
+    static func ==(lhs: Card, rhs: Card) -> Bool {
+        return lhs.identifier == rhs.identifier
     }
 }
