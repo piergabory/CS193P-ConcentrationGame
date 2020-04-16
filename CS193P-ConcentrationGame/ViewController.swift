@@ -56,17 +56,17 @@ class ViewController: UIViewController {
     ]
     
     private var theme: String?
-    private var emoji = [Int:String]()
+    private var emoji = [Card:String]()
     
     private func emoji(for card:Card) -> String {
         if theme == nil { theme = themes.randomElement() }
         
-        if emoji[card.identifier] == nil {
+        if emoji[card] == nil {
             let randomIndex = theme!.indices.randomElement()!
-            emoji[card.identifier] = String(theme!.remove(at: randomIndex))
+            emoji[card] = String(theme!.remove(at: randomIndex))
         }
         
-        return emoji[card.identifier] ?? "?"
+        return emoji[card] ?? "?"
     }
     
 }

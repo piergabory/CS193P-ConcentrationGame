@@ -8,22 +8,19 @@
 
 import Foundation
 
-struct Card {
+struct Card: Hashable {
+    var isMatched = false
     var isFaceUp = false { didSet { seen = isFaceUp || seen } }
     private(set) var seen = false
     
-    var isMatched = false
-    var identifier: Int
-    
+    private var identifier: Int
     private static var nextIdentifier = 0
+    
     init() {
         identifier = Card.nextIdentifier
         Card.nextIdentifier += 1
     }
-}
-
-extension Card: Equatable {
-    static func ==(lhs: Card, rhs: Card) -> Bool {
-        return lhs.identifier == rhs.identifier
-    }
+    
+    static func ==(lhs: Card, rhs: Card) -> Bool { return lhs.identifier == rhs.identifier }
+    func hash(into hasher: inout Hasher) { hasher.combine(identifier) }
 }
