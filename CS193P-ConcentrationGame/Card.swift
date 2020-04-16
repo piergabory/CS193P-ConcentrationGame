@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card: Hashable {
+struct Card {
     var isMatched = false
     var isFaceUp = false { didSet { seen = isFaceUp || seen } }
     private(set) var seen = false
@@ -20,7 +20,9 @@ struct Card: Hashable {
         identifier = Card.nextIdentifier
         Card.nextIdentifier += 1
     }
-    
+}
+
+extension Card: Hashable {
     static func ==(lhs: Card, rhs: Card) -> Bool { return lhs.identifier == rhs.identifier }
     func hash(into hasher: inout Hasher) { hasher.combine(identifier) }
 }
