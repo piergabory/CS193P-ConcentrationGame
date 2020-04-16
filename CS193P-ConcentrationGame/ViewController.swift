@@ -14,12 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet private var cardButtons: [UIButton]!
     
     @IBAction private func touchCard(_ sender: UIButton) {
-        flipCount += 1
-        
-        if let cardIndex = cardButtons.firstIndex(of: sender) {
-            game.chooseCard(at: cardIndex)
-            updateGameView()
-        }
+        guard let cardIndex = cardButtons.firstIndex(of: sender) else { return }
+        game.chooseCard(at: cardIndex)
+        updateGameView()
     }
     
     @IBAction private func resetGame(_ sender: UIButton) {
@@ -31,9 +28,10 @@ class ViewController: UIViewController {
     
     private var numberOfPairsOfCards: Int { (cardButtons.count + 1) / 2 }
     private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
-    private var flipCount = 0 { didSet { flipCountLabel.text = "Flip Count \(flipCount)" } }
     
     private func updateGameView() {
+        flipCountLabel.text = "Flip: \(game.numberOfFlips), Score: \(game.playerScore)"
+        
         for index in cardButtons.indices {
             let button = cardButtons[index]
             let card = game.cards[index]

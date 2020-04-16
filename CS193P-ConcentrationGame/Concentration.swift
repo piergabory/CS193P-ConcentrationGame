@@ -9,6 +9,10 @@
 import Foundation
 
 class Concentration {
+    
+    private(set) var numberOfFlips = 0
+    private(set) var playerScore = 0
+    
     var cards = [Card]()
     
     private var indexOfOneAndOnlyFaceUpCard: Int? {
@@ -34,19 +38,24 @@ class Concentration {
     
     public func chooseCard(at index: Int) {
         assert(cards.indices.contains(index), "Card index out of bounds.")
-        
-        // ignore matched cards
         if cards[index].isMatched { return }
+        
+        numberOfFlips += 1
         
         // try matching a card with another
         if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
             if cards[matchIndex] == cards[index] {
                 cards[matchIndex].isMatched = true
                 cards[index].isMatched = true
+                playerScore += 2
             }
             
+            else if cards[index].seen { playerScore -= 1 }
+            
             cards[index].isFaceUp = true
-        }  else {
+        }
+        
+        else {
             indexOfOneAndOnlyFaceUpCard = index
         }
     }
