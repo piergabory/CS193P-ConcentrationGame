@@ -9,14 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+    @IBOutlet private weak var flipCountLabel: UILabel!
+    @IBOutlet private var cardButtons: [UIButton]!
     
-    private lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
-    private var flipCount = 0 { didSet { flipCountLabel.text = "Flip Count \(flipCount)" } }
-
-    @IBOutlet weak var flipCountLabel: UILabel!
-    @IBOutlet var cardButtons: [UIButton]!
-    
-    @IBAction func touchCard(_ sender: UIButton) {
+    @IBAction private func touchCard(_ sender: UIButton) {
         flipCount += 1
         
         if let cardIndex = cardButtons.firstIndex(of: sender) {
@@ -25,10 +22,16 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func resetGame(_ sender: UIButton) {
-        game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+    @IBAction private func resetGame(_ sender: UIButton) {
+        game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+        theme = nil
         updateGameView()
     }
+    
+    
+    private var numberOfPairsOfCards: Int { (cardButtons.count + 1) / 2 }
+    private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+    private var flipCount = 0 { didSet { flipCountLabel.text = "Flip Count \(flipCount)" } }
     
     private func updateGameView() {
         for index in cardButtons.indices {
@@ -47,17 +50,25 @@ class ViewController: UIViewController {
         }
     }
     
-    private var emojisChoices = ["🍕", "🍔", "🍟", "🍗", "🍖", "🍝", "🍛", "🍤", "🍱", "🍣", "🍥", "🍙", "🍘", "🍚", "🍜", "🍲", "🍢", "🍡", "🥚", "🍞", "🍩", "🍮", "🍦", "🍨", "🍧", "🎂", "🍰", "🍪", "🍫", "🍬", "🍭", "🍯", "🍎", "🍏", "🍊", "🍋", "🍒", "🍇", "🍉", "🍓", "🍑", "🍈", "🍌", "🍐", "🍍", "🍠", "🍆", "🍅", "🌽"]
+    private let themes = [
+        "🍕🍔🍟🍗🍖🍝🍞🍯🍆🍅🌽",
+        "🍎🍏🍊🍋🍒🍇🍉🍓🍌🍐🍍",
+        "🍱🍣🍥🍙🍘🍚🍜🍲🍠🍢🍡",
+        "🍩🍮🍦🍨🍧🎂🍰🍪🍫🍬🍭"
+    ]
+    
+    private var theme: String?
     private var emoji = [Int:String]()
     
     private func emoji(for card:Card) -> String {
-        if emoji[card.identifier] == nil, !emojisChoices.isEmpty {
-            let randomIndex = emojisChoices.indices.randomElement()!
-            emoji[card.identifier] = emojisChoices.remove(at: randomIndex)
+        if theme == nil { theme = themes.randomElement() }
+        
+        if emoji[card.identifier] == nil {
+            let randomIndex = theme!.indices.randomElement()!
+            emoji[card.identifier] = String(theme!.remove(at: randomIndex))
         }
         
         return emoji[card.identifier] ?? "?"
     }
     
 }
-
